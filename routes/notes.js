@@ -39,8 +39,13 @@ notes.delete('/:id', (req, res) => {
         // Ensure req.body has necessary fields.
         if (!data) {
             res.status(500).json("No Notes to delete!");
+            return;
         }
         let posts = JSON.parse(data);
+        if (posts.length < 1) {
+            res.status(500).json("No Notes to delete!");
+
+        }
         let hasDeleted = false;
         for (let i = 0; i < posts.length; i++) {
             if (posts[i].id == req.params.id) {
