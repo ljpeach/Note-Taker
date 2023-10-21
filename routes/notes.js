@@ -34,4 +34,28 @@ notes.post('/', (req, res) => {
     })
 });
 
+notes.delete('/:id', (req, res) => {
+    readFile('./db/db.json', 'utf-8').then((data) => {
+        // Ensure req.body has necessary fields.
+        if (!data) {
+            res.status(500).json("No Notes to delete!");
+        }
+        let posts = JSON.parse(data);
+        let hasDeleted = false;
+        for (let i = 0; i < posts.length; i++) {
+            if (posts[i].id == req.params.id) {
+                posts.splice(i, 1);
+                hasDeleted = true;
+                break;
+            }
+        }
+        if (hasDeleted) {
+            writeFile('./db/db.json', JSON.stringify(posts, null, 2));
+            res.status(201).json('Note deleted successfully');
+        }
+        else {
+            res.status(500).json('No note with that ID found.');
+        }
+    })
+});
 module.exports = notes;
