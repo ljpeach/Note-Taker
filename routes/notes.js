@@ -44,6 +44,7 @@ notes.delete('/:id', (req, res) => {
         let posts = JSON.parse(data);
         if (posts.length < 1) {
             res.status(500).json("No Notes to delete!");
+            return;
 
         }
         let hasDeleted = false;
