@@ -10,4 +10,4 @@ The deployed website can be found [here](https://warm-gorge-77353-3feea4ff60f3.h
 
 ## Project Preview
 
-![Preview of Completed Website](./assets/images/preview.png)
+![Preview of Completed Website](./assets/preview.png)
