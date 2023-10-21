@@ -1,7 +1,12 @@
 [
   {
-    "id": "f72c73ed-4505-48ba-8e4c-2a94b2acd4e8",
-    "title": "Test Title",
-    "text": "Test text"
+    "id": "b8a58a74-526e-48f4-abac-8c41db10c346",
+    "title": "First note!",
+    "text": "I sure do hope i get accepted by the acceptance criteria!"
+  },
+  {
+    "id": "6c01d6be-9949-409b-a05e-03b03127bcd2",
+    "title": "second note",
+    "text": "i think i got it!"
   }
 ]
